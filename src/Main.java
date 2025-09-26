@@ -21,5 +21,6 @@ public class Main {
             System.out.println("Has that many vowels: " + utils.countVowels(str));
             break;
         }
+        scanner.close();
     }
 }
