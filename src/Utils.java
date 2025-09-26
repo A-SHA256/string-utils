@@ -16,14 +16,15 @@ public class Utils {
     }
 
     public boolean pat(String s) {
-        return s.matches("^(?i)[aeiou].*");
+        s = s.trim().toLowerCase();
+        return s.matches("[aeiouy]");
     }
 
     public int countVowels(String s) {
         int i;
         int counter = 0;
+        String[] arr = s.split("");
 
-        String[] arr = s.trim().toLowerCase().split("");
         for (i = 0; i < arr.length; i++){
             if (pat(arr[i])) {
                 counter += 1;
