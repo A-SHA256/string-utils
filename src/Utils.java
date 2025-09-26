@@ -1,13 +1,13 @@
 public class Utils {
 
     public String backwards(String s) {
-        String reversed = "";
+        StringBuilder reversed = new StringBuilder();
         int len = s.length();
         int i;
         for (i = 0; i < len; i++) {
-            reversed += s.charAt(len-1-i);
+            reversed.append(s.charAt(len - 1 - i));
         }
-        return reversed;
+        return reversed.toString();
     }
 
     public boolean palindrome(String s) {
