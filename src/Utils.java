@@ -11,6 +11,7 @@ public class Utils {
     }
 
     public boolean palindrome(String s) {
+        s = s.trim().toLowerCase();
         return s.equals(backwards(s));
     }
 
@@ -22,7 +23,7 @@ public class Utils {
         int i;
         int counter = 0;
 
-        String[] arr = s.split("");
+        String[] arr = s.trim().toLowerCase().split("");
         for (i = 0; i < arr.length; i++){
             if (pat(arr[i])) {
                 counter += 1;
